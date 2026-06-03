@@ -1,0 +1,204 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #FFF8F0 0%, #EAD5C4 50%, #D4A373 100%);
+    background-attachment: fixed;
+    color: #4A2E1B;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(255, 248, 240, 0.6);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(212, 163, 115, 0.3);
+}
+
+.logo {
+    font-family: 'Playball', cursive;
+    font-size: 34px;
+    color: #4A2E1B;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4A2E1B;
+    margin: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid #D4A373;
+}
+
+.hero-section {
+    position: relative;
+    height: 80vh;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, rgba(212, 163, 115, 0.1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.subtitle {
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: -10px;
+    color: #5C3D26;
+}
+
+.brand-title {
+    font-family: 'Playball', cursive;
+    font-size: 85px;
+    color: #FFF8F0;
+    text-shadow: 2px 3px 8px rgba(74, 46, 27, 0.3);
+    margin: 10px 0 35px 0;
+}
+
+.primary-btn {
+    background-color: #4A2E1B;
+    color: #FFF8F0;
+    padding: 15px 45px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(74, 46, 27, 0.2);
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    background-color: #D4A373;
+    color: #4A2E1B;
+    transform: translateY(-2px);
+}
+.locations-section {
+    display: flex;
+    height: calc(100vh - 85px);
+    overflow: hidden;
+}
+
+.map-container {
+    flex: 6;
+    height: 100%;
+}
+
+.locations-list {
+    flex: 4;
+    background: rgba(255, 248, 240, 0.85);
+    backdrop-filter: blur(15px);
+    overflow-y: auto;
+    padding: 35px;
+    border-left: 1px solid rgba(212, 163, 115, 0.3);
+}
+
+.location-header h2 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #4A2E1B;
+}
+
+.location-header input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #D4A373;
+    border-radius: 10px;
+    background: #FFF8F0;
+    margin-bottom: 30px;
+    outline: none;
+    color: #4A2E1B;
+    font-family: inherit;
+}
+
+.location-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(74, 46, 27, 0.06);
+    border: 1px solid rgba(212, 163, 115, 0.1);
+}
+
+.location-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.location-card h3 {
+    margin: 0 0 8px 0;
+    color: #4A2E1B;
+    font-size: 20px;
+}
+
+.location-card p {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #5C3D26;
+}
+
+.status {
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+.status span {
+    color: #8B5A2B;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.order-btn {
+    display: block;
+    text-align: center;
+    background-color: #D4A373;
+    color: #4A2E1B;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #4A2E1B;
+    color: #FFF8F0;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .locations-section {
+        flex-direction: column;
+        overflow: visible;
+        height: auto;
+    }
+    
+    .map-container {
+        height: 45vh;
+    }
+    
+    .locations-list {
+        border-left: none;
+        border-top: 1px solid rgba(212, 163, 115, 0.3);
+    }
+}
