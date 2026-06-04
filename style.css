@@ -87,6 +87,7 @@ body {
     color: #4A2E1B;
     transform: translateY(-2px);
 }
+
 .locations-section {
     display: flex;
     height: calc(100vh - 85px);
@@ -200,5 +201,90 @@ body {
     .locations-list {
         border-left: none;
         border-top: 1px solid rgba(212, 163, 115, 0.3);
+    }
+}
+
+.menu-page {
+    padding: 60px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-title {
+    text-align: center;
+    font-family: 'Playball', cursive;
+    font-size: 65px;
+    color: #4A2E1B;
+    margin-bottom: 60px;
+    letter-spacing: 2px;
+}
+
+.menu-category {
+    margin-bottom: 90px;
+}
+
+.menu-category h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #5C3D26;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.menu-item {
+    text-align: center;
+    background: transparent;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 15px 15px rgba(74, 46, 27, 0.2)); 
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    color: #4A2E1B;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.menu-item p {
+    font-size: 14px;
+    color: #7A5C43;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .menu-page {
+        padding: 40px 20px;
+    }
+    
+    .page-title {
+        font-size: 45px;
+    }
+    
+    .menu-category h2 {
+        font-size: 28px;
+    }
+    
+    .menu-item img {
+        height: 200px;
     }
 }
