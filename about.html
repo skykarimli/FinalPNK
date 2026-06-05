@@ -9,78 +9,134 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">Lady's Brew</div>
-        <nav class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="locations.html">ORDER NOW</a>
-            <a href="about.html" class="active">ABOUT US</a>
-            <a href="menu.html">MENU</a>
-        </nav>
-        <div class="nav-icons">
-            <span class="icon">🔍</span>
-            <a href="login.html" class="icon">👤</a>
-            <span class="icon">🛍️</span>
-        </div>
-    </header>
-
-    <main class="about-page">
-      <section class="about-hero">
-    <div class="about-hero-image">
-        <img src="imagesfinalproject/cafeoutside.jpg" alt="Lady's Brew Cafe">
+<header class="main-header">
+    <div class="logo">Lady's Brew</div>
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="locations.html">ORDER NOW</a>
+        <a href="about.html" class="active">ABOUT US</a>
+        <a href="menu.html">MENU</a>
+    </nav>
+    <div class="nav-icons">
+      <span class="icon" id="searchIconBtn">
+        <img src="imagesfinalproject/search.svg" alt="Search" class="nav-svg-img">
+      </span>
+      <a href="javascript:void(0)" class="icon" id="loginIcon">
+        <img src="imagesfinalproject/user.svg" alt="User" class="nav-svg-img">
+      </a>
     </div>
-    <div class="about-hero-text">
-        <h2>Why Lady's Brew?</h2>
-        <p>Lady's Brew is more than a café; it’s a thoughtfully designed sanctuary where every detail is crafted for your comfort. We believe in creating a space that feels like a warm embrace—a place where the rich aroma of premium coffee meets the genuine kindness of community.</p>
-        <p>Our mission is simple: to bring moments of pure happiness into your busy day. Whether it's our hand-selected coffee blends, the cozy atmosphere, or the heartfelt service, everything we do is dedicated to one goal—ensuring you feel at home the moment you step through our doors.</p>
+</header>
+
+<div class="ladysbrew-search-overlay hidden" id="ladysbrewSearchOverlay">
+    <div class="ladysbrew-search-container">
+        <div class="ladysbrew-search-pill">
+            <input type="text" id="ladysbrewSearchInput" placeholder="Search" autocomplete="off">
+            <button class="pill-clear-btn hidden" id="pillClearBtn">
+                <img src="imagesfinalproject/clearinner.svg" alt="Clear">
+            </button>
+            <div class="pill-divider hidden" id="pillDivider"></div>
+            <span class="pill-inner-search-icon" id="innerSearchBtn">
+                <img src="imagesfinalproject/search.svg" alt="Search">
+            </span>
+        </div>
+        <button class="ladysbrew-close-btn" id="ladysbrewCloseBtn">
+            <img src="imagesfinalproject/close.svg" alt="Close">
+        </button>
     </div>
-</section>
-
-<section class="shop-section">
-    <h2 class="about-section-title">Our Philosophy</h2>
-    <div class="product-grid">
-        <div class="product-card">
-            <img src="imagesfinalproject/logooutside.jpg" alt="Logo">
-            <h3>Inspire Elegance</h3>
-            <p>We blend timeless aesthetic with modern comfort.</p>
-        </div>
-        <div class="product-card">
-            <img src="imagesfinalproject/cafeinterior.jpg" alt="Interior">
-            <h3>Feel at Home</h3>
-            <p>Creating warmth, one cup at a time.</p>
-        </div>
-        <div class="product-card">
-            <img src="imagesfinalproject/aboutcoffees.jpg" alt="Coffee">
-            <h3>Quality Above All</h3>
-            <p>From bean to brew, excellence is our standard.</p>
-        </div>
+    <div class="ladysbrew-results-wrapper hidden" id="ladysbrewResultsContainer">
+        <div class="ladysbrew-results" id="ladysbrewSearchResults"></div>
     </div>
-</section>
-    </main>
+</div>
 
-    <footer class="custom-footer">
-        <div class="footer-subscribe">
-            <h2>Subscribe to our emails</h2>
-            <p>Be the first to know about new collections and exclusive offers.</p>
-         <form class="subscribe-form" id="subscribeForm">
-          <input type="email" name="email" placeholder="Email" required>
-          <button type="submit">→</button>
-         </form>
-
-          <div id="successMessage" class="success-message" style="display: none;">
-            <span class="check-icon">✓</span>
-            <span>Thanks for subscribing</span>
-          </div>
+<main class="about-page">
+    <section class="about-hero">
+        <div class="about-hero-image">
+            <img src="imagesfinalproject/cafeoutside.jpg" alt="Lady's Brew Cafe">
         </div>
-        <hr class="footer-divider">
-        <div class="footer-content">
-            <div class="footer-logo"><h2 class="brand-font">Lady's Brew</h2></div>
-            <div class="footer-links-container">
-                <div class="footer-column"><h3>Company</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li></ul></div>
-                <div class="footer-column"><h3>Shop</h3><ul><li><a href="shop.html">Coffee Blends</a></li></ul></div>
-                <div class="footer-column"><h3>Support</h3><ul><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+        <div class="about-hero-text">
+            <h2>Why Lady's Brew?</h2>
+            <p>Lady's Brew is more than a café; it’s a thoughtfully designed sanctuary where every detail is crafted for your comfort. We believe in creating a space that feels like a warm embrace—a place where the rich aroma of premium coffee meets the genuine kindness of community.</p>
+            <p>Our mission is simple: to bring moments of pure happiness into your busy day. Whether it's our hand-selected coffee blends, the cozy atmosphere, or the heartfelt service, everything we do is dedicated to one goal—ensuring you feel at home the moment you step through our doors.</p>
+        </div>
+    </section>
+
+    <section class="shop-section">
+        <h2 class="about-section-title">Our Philosophy</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="imagesfinalproject/logooutside.jpg" alt="Logo">
+                <h3>Inspire Elegance</h3>
+                <p>We blend timeless aesthetic with modern comfort.</p>
+            </div>
+            <div class="product-card">
+                <img src="imagesfinalproject/cafeinterior.jpg" alt="Interior">
+                <h3>Feel at Home</h3>
+                <p>Creating warmth, one cup at a time.</p>
+            </div>
+            <div class="product-card">
+                <img src="imagesfinalproject/aboutcoffees.jpg" alt="Coffee">
+                <h3>Quality Above All</h3>
+                <p>From bean to brew, excellence is our standard.</p>
             </div>
         </div>
-    </footer>
+    </section>
+</main>
+
+<footer class="custom-footer">
+    <div class="footer-subscribe">
+        <h2>Subscribe to our emails</h2>
+        <p>Be the first to know about new collections and exclusive offers.</p>
+        <form class="subscribe-form" id="subscribeForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">→</button>
+        </form>
+        <div id="successMessage" class="success-message hidden">
+            <span class="check-icon">✓</span>
+            <span>Thanks for subscribing</span>
+        </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-content">
+        <div class="footer-logo"><h2 class="brand-font">Lady's Brew</h2></div>
+        <div class="footer-links-container">
+            <div class="footer-column"><h3>Company</h3><ul><li><a href="index.html">Home</a></li><li><a href="menu.html">Menu</a></li><li><a href="about.html">About Us</a></li></ul></div>
+        </div>
+    </div>
+</footer>
+
+<div class="auth-overlay hidden" id="authOverlay">
+    <div class="auth-container">
+        <button class="auth-close-btn" id="authCloseBtn">✕</button>
+        <div id="view-login" class="auth-view">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" id="login-email">
+            <input type="password" placeholder="Password" id="login-pass">
+            <a href="#" class="forgot-link" onclick="showView('view-forgot')">Forgot your password?</a>
+            <button class="primary-btn" onclick="window.location.href='index.html'">Sign in</button>
+            <p class="auth-footer">or <span class="link" onclick="showView('view-create')">Create account</span></p>
+        </div>
+        <div id="view-forgot" class="auth-view hidden">
+            <h2>Reset your password</h2>
+            <p class="auth-desc">We will send you an email to reset your password</p>
+            <input type="email" placeholder="Email">
+            <button class="primary-btn" onclick="showLoginWithMsg()">Submit</button>
+            <p class="cancel-link" onclick="showView('view-login')">Cancel</p>
+        </div>
+        <div id="view-create" class="auth-view hidden">
+            <h2>Create account</h2>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="primary-btn" onclick="window.location.href='index.html'">Create</button>
+            <p class="auth-footer"><span class="link" onclick="showView('view-login')">Back to Login</span></p>
+        </div>
+        <div id="login-success-msg" class="success-message hidden">
+            <span class="check-icon">✓</span>
+            <span>We've sent you an email.</span>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>

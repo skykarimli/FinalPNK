@@ -9,273 +9,312 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">Lady's Brew</div>
-        <nav class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="locations.html">ORDER NOW</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="menu.html" class="active">MENU</a>
-        </nav>
-        <div class="nav-icons">
-            <span class="icon">🔍</span>
-            <a href="login.html" class="icon">👤</a>
-            <span class="icon">🛍️</span>
+<header class="main-header">
+    <div class="logo">Lady's Brew</div>
+    <nav class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="locations.html">ORDER NOW</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="menu.html" class="active">MENU</a>
+    </nav>
+    <div class="nav-icons">
+      <span class="icon" id="searchIconBtn">
+        <img src="imagesfinalproject/search.svg" alt="Search" class="nav-svg-img">
+      </span>
+      <a href="javascript:void(0)" class="icon" id="loginIcon">
+        <img src="imagesfinalproject/user.svg" alt="User" class="nav-svg-img">
+      </a>
+    </div>
+</header>
+
+<div class="ladysbrew-search-overlay hidden" id="ladysbrewSearchOverlay">
+    <div class="ladysbrew-search-container">
+        <div class="ladysbrew-search-pill">
+            <input type="text" id="ladysbrewSearchInput" placeholder="Search" autocomplete="off">
+            <button class="pill-clear-btn hidden" id="pillClearBtn">
+                <img src="imagesfinalproject/clearinner.svg" alt="Clear">
+            </button>
+            <div class="pill-divider hidden" id="pillDivider"></div>
+            <span class="pill-inner-search-icon" id="innerSearchBtn">
+                <img src="imagesfinalproject/search.svg" alt="Search">
+            </span>
         </div>
-    </header>
-
-    <main class="menu-page">
-        <h1 class="page-title">MENU</h1>
-
-        <section class="menu-category">
-            <h2>Classic Coffees</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="imagesfinalproject/americanofinal.png" alt="Iced Americano">
-                    <h3>Iced Americano</h3>
-                    <p>Classic espresso poured over filtered water and ice.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/caramelmacchiato.png" alt="Caramel Macchiato">
-                    <h3>Caramel Macchiato</h3>
-                    <p>Vanilla syrup, espresso, milk, and sweet caramel drizzle.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/darkmochalatte.png" alt="Dark Mocha Latte">
-                    <h3>Dark Mocha Latte</h3>
-                    <p>Rich chocolate sauce, bold espresso, and creamy milk.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/vanillalatte.png" alt="Vanilla Latte">
-                    <h3>Vanilla Latte</h3>
-                    <p>Smooth espresso mixed with sweet vanilla syrup and milk.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/hazelnutlatte.png" alt="Hazelnut Latte">
-                    <h3>Hazelnut Latte</h3>
-                    <p>Rich hazelnut syrup blended with espresso and milk.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/spanishlatte.png" alt="Spanish Latte">
-                    <h3>Spanish Latte</h3>
-                    <p>Sweet condensed milk, rich espresso, and creamy milk.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/whitemochalatte.png" alt="White Mocha Latte">
-                    <h3>White Mocha Latte</h3>
-                    <p>White chocolate sauce, espresso, and smooth milk.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="menu-category">
-            <h2>Premium Matcha</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="imagesfinalproject/strawberrymatcha.png" alt="Strawberry Matcha">
-                    <h3>Strawberry Matcha</h3>
-                    <p>Ceremonial matcha layered over fresh strawberry puree.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/lattematcha.png" alt="Matcha Latte">
-                    <h3>Matcha Latte</h3>
-                    <p>Pure, earthy ceremonial matcha blended with smooth milk.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/chocolatematcha.png" alt="Chocolate Matcha">
-                    <h3>Chocolate Matcha</h3>
-                    <p>A unique blend of rich chocolate sauce and green matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/taromatcha.png" alt="Taro Matcha">
-                    <h3>Taro Matcha</h3>
-                    <p>Sweet, nutty taro root paired with vibrant matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/caramelmatcha.png" alt="Caramel Matcha">
-                    <h3>Caramel Matcha</h3>
-                    <p>Sweet caramel drizzle mixed with premium iced matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/mangomatcha.png" alt="Mango Matcha">
-                    <h3>Mango Matcha</h3>
-                    <p>Tropical mango puree topped with fresh ceremonial matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/blueberrymatcha.png" alt="Blueberry Matcha">
-                    <h3>Blueberry Matcha</h3>
-                    <p>Fresh blueberry base paired perfectly with green matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/pinkmatcha.png" alt="Pink Matcha">
-                    <h3>Pink Matcha</h3>
-                    <p>Beautiful pink base topped with our signature matcha.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/bananamatcha.png" alt="Banana Matcha">
-                    <h3>Banana Matcha</h3>
-                    <p>Creamy banana flavors mixed with earthy premium matcha.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="menu-category">
-            <h2>Signature Toasts</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="imagesfinalproject/TheQueenAvocadoEggToast.png" alt="The Queen Avocado Toast">
-                    <h3>"The Queen" Avocado Toast</h3>
-                    <p>Fresh avocado mash, everything seasoning, and a fried egg.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/StrawberryCreamToast.png" alt="Strawberry Cream Toast">
-                    <h3>Strawberry Cream Toast</h3>
-                    <p>Smooth cream cheese topped with fresh strawberry slices.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/RicottaPistachioToast.png" alt="Ricotta Pistachio Toast">
-                    <h3>Ricotta Pistachio Toast</h3>
-                    <p>Whipped ricotta, crushed pistachios, and a honey drizzle.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/CapreseToast.png" alt="Caprese Toast">
-                    <h3>Caprese Toast</h3>
-                    <p>Fresh tomatoes, basil leaves, and balsamic glaze.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/BananaBerryToast.png" alt="Banana Berry Toast">
-                    <h3>Banana Berry Toast</h3>
-                    <p>Peanut butter topped with bananas and fresh berries.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/BananaGridToast.png" alt="Banana Grid Toast">
-                    <h3>Banana Grid Toast</h3>
-                    <p>Sliced bananas arranged over creamy peanut butter.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/CottageCheeseHoney.png" alt="Cottage Cheese Honey Toast">
-                    <h3>Cottage Cheese & Honey</h3>
-                    <p>Fresh cottage cheese topped with a sweet honey drizzle.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/FreshCucumberToast.png" alt="Fresh Cucumber Toast">
-                    <h3>Fresh Cucumber Toast</h3>
-                    <p>Cream cheese spread topped with crisp cucumber slices.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/RadishMicrogreensToast.png" alt="Radish Microgreens Toast">
-                    <h3>Radish Microgreens Toast</h3>
-                    <p>Sliced radishes and fresh microgreens over avocado.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/RaspberryAlmondToast.png" alt="Raspberry Almond Toast">
-                    <h3>Raspberry Almond Toast</h3>
-                    <p>Almond butter topped with juicy fresh raspberries.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/RaspberryJamCream.png" alt="Raspberry Jam Cream Toast">
-                    <h3>Raspberry Jam Cream</h3>
-                    <p>Rich cream cheese paired with sweet raspberry jam.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/SpicyJalapeño.png" alt="Spicy Jalapeño Toast">
-                    <h3>Spicy Jalapeño Toast</h3>
-                    <p>Avocado mash topped with fresh spicy jalapeño slices.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/StrawberryJam.png" alt="Strawberry Jam Toast">
-                    <h3>Strawberry Jam Toast</h3>
-                    <p>Classic peanut butter layered with sweet strawberry jam.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="menu-category">
-            <h2>Healthy Bowls</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <img src="imagesfinalproject/PinkDragonBowl.png" alt="Pink Dragon Bowl">
-                    <h3>Pink Dragon Bowl</h3>
-                    <p>Dragonfruit base, granola, banana, and chia seeds.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/RoastedPeachGranolaBowl.png" alt="Roasted Peach Bowl">
-                    <h3>Roasted Peach Granola Bowl</h3>
-                    <p>Caramelized roasted peaches over oats and crunchy granola.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/DoubleChocolateBananaBowl.png" alt="Double Chocolate Banana Bowl">
-                    <h3>Double Chocolate Banana</h3>
-                    <p>Rich chocolate base, banana slices, and dark chocolate chunks.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/AntioxidantPowerBowl.png" alt="Antioxidant Power Bowl">
-                    <h3>Antioxidant Power Bowl</h3>
-                    <p>Oat base topped with pomegranate, berries, almonds, and banana.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/BlueberryCrunchBowl.png" alt="Blueberry Crunch Bowl">
-                    <h3>Blueberry Crunch Bowl</h3>
-                    <p>Yogurt base paired with fresh blueberries and dark granola.</p>
-                </div>
-                <div class="menu-item">
-                    <img src="imagesfinalproject/WalnutBerryCrunchBowl.png" alt="Walnut Berry Crunch Bowl">
-                    <h3>Walnut Berry Crunch Bowl</h3>
-                    <p>Pink oat base topped with walnuts, raspberries, and honey.</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-     <footer class="custom-footer">
-        <div class="footer-subscribe">
-    <h2>Subscribe to our emails</h2>
-    <p>Be the first to know about new collections and exclusive offers.</p>
-    
-  <form class="subscribe-form" id="subscribeForm">
-    <input type="email" name="email" placeholder="Email" required>
-    <button type="submit">→</button>
-  </form>
-    
-    <div id="successMessage" class="success-message">
-        <span class="check-icon">✓</span>
-        <span>Thanks for subscribing</span>
+        <button class="ladysbrew-close-btn" id="ladysbrewCloseBtn">
+            <img src="imagesfinalproject/close.svg" alt="Close">
+        </button>
+    </div>
+    <div class="ladysbrew-results-wrapper hidden" id="ladysbrewResultsContainer">
+        <div class="ladysbrew-results" id="ladysbrewSearchResults"></div>
     </div>
 </div>
-    <hr class="footer-divider">
 
+<main class="menu-page">
+    <h1 class="page-title">MENU</h1>
+
+    <section class="menu-category">
+        <h2>Classic Coffees</h2>
+        <div class="menu-grid">
+            <div class="menu-item" id="iced-americano">
+                <img src="imagesfinalproject/americanofinal.png" alt="Iced Americano">
+                <h3>Iced Americano</h3>
+                <p>Classic espresso poured over filtered water and ice.</p>
+            </div>
+            <div class="menu-item" id="caramel-macchiato">
+                <img src="imagesfinalproject/caramelmacchiato.png" alt="Caramel Macchiato">
+                <h3>Caramel Macchiato</h3>
+                <p>Vanilla syrup, espresso, milk, and sweet caramel drizzle.</p>
+            </div>
+            <div class="menu-item" id="dark-mocha">
+                <img src="imagesfinalproject/darkmochalatte.png" alt="Dark Mocha Latte">
+                <h3>Dark Mocha Latte</h3>
+                <p>Rich chocolate sauce, bold espresso, and creamy milk.</p>
+            </div>
+            <div class="menu-item" id="vanilla-latte">
+                <img src="imagesfinalproject/vanillalatte.png" alt="Vanilla Latte">
+                <h3>Vanilla Latte</h3>
+                <p>Smooth espresso mixed with sweet vanilla syrup and milk.</p>
+            </div>
+            <div class="menu-item" id="hazelnut-latte">
+                <img src="imagesfinalproject/hazelnutlatte.png" alt="Hazelnut Latte">
+                <h3>Hazelnut Latte</h3>
+                <p>Rich hazelnut syrup blended with espresso and milk.</p>
+            </div>
+            <div class="menu-item" id="spanish-latte">
+                <img src="imagesfinalproject/spanishlatte.png" alt="Spanish Latte">
+                <h3>Spanish Latte</h3>
+                <p>Sweet condensed milk, rich espresso, and creamy milk.</p>
+            </div>
+            <div class="menu-item" id="white-mocha">
+                <img src="imagesfinalproject/whitemochalatte.png" alt="White Mocha Latte">
+                <h3>White Mocha Latte</h3>
+                <p>White chocolate sauce, espresso, and smooth milk.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-category">
+        <h2>Premium Matcha</h2>
+        <div class="menu-grid">
+            <div class="menu-item" id="strawberry-matcha">
+                <img src="imagesfinalproject/strawberrymatcha.png" alt="Strawberry Matcha">
+                <h3>Strawberry Matcha</h3>
+                <p>Ceremonial matcha layered over fresh strawberry puree.</p>
+            </div>
+            <div class="menu-item" id="matcha-latte">
+                <img src="imagesfinalproject/lattematcha.png" alt="Matcha Latte">
+                <h3>Matcha Latte</h3>
+                <p>Pure, earthy ceremonial matcha blended with smooth milk.</p>
+            </div>
+            <div class="menu-item" id="chocolate-matcha">
+                <img src="imagesfinalproject/chocolatematcha.png" alt="Chocolate Matcha">
+                <h3>Chocolate Matcha</h3>
+                <p>A unique blend of rich chocolate sauce and green matcha.</p>
+            </div>
+            <div class="menu-item" id="taro-matcha">
+                <img src="imagesfinalproject/taromatcha.png" alt="Taro Matcha">
+                <h3>Taro Matcha</h3>
+                <p>Sweet, nutty taro root paired with vibrant matcha.</p>
+            </div>
+            <div class="menu-item" id="caramel-matcha">
+                <img src="imagesfinalproject/caramelmatcha.png" alt="Caramel Matcha">
+                <h3>Caramel Matcha</h3>
+                <p>Sweet caramel drizzle mixed with premium iced matcha.</p>
+            </div>
+            <div class="menu-item" id="mango-matcha">
+                <img src="imagesfinalproject/mangomatcha.png" alt="Mango Matcha">
+                <h3>Mango Matcha</h3>
+                <p>Tropical mango puree topped with fresh ceremonial matcha.</p>
+            </div>
+            <div class="menu-item" id="blueberry-matcha">
+                <img src="imagesfinalproject/blueberrymatcha.png" alt="Blueberry Matcha">
+                <h3>Blueberry Matcha</h3>
+                <p>Fresh blueberry base paired perfectly with green matcha.</p>
+            </div>
+            <div class="menu-item" id="pink-matcha">
+                <img src="imagesfinalproject/pinkmatcha.png" alt="Pink Matcha">
+                <h3>Pink Matcha</h3>
+                <p>Beautiful pink base topped with our signature matcha.</p>
+            </div>
+            <div class="menu-item" id="banana-matcha">
+                <img src="imagesfinalproject/bananamatcha.png" alt="Banana Matcha">
+                <h3>Banana Matcha</h3>
+                <p>Creamy banana flavors mixed with earthy premium matcha.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-category">
+        <h2>Signature Toasts</h2>
+        <div class="menu-grid">
+            <div class="menu-item" id="queen-avocado">
+                <img src="imagesfinalproject/TheQueenAvocadoEggToast.png" alt="The Queen Avocado Toast">
+                <h3>"The Queen" Avocado Toast</h3>
+                <p>Fresh avocado mash, everything seasoning, and a fried egg.</p>
+            </div>
+            <div class="menu-item" id="strawberry-toast">
+                <img src="imagesfinalproject/StrawberryCreamToast.png" alt="Strawberry Cream Toast">
+                <h3>Strawberry Cream Toast</h3>
+                <p>Smooth cream cheese topped with fresh strawberry slices.</p>
+            </div>
+            <div class="menu-item" id="ricotta-toast">
+                <img src="imagesfinalproject/RicottaPistachioToast.png" alt="Ricotta Pistachio Toast">
+                <h3>Ricotta Pistachio Toast</h3>
+                <p>Whipped ricotta, crushed pistachios, and a honey drizzle.</p>
+            </div>
+            <div class="menu-item" id="caprese-toast">
+                <img src="imagesfinalproject/CapreseToast.png" alt="Caprese Toast">
+                <h3>Caprese Toast</h3>
+                <p>Fresh tomatoes, basil leaves, and balsamic glaze.</p>
+            </div>
+            <div class="menu-item" id="banana-berry">
+                <img src="imagesfinalproject/BananaBerryToast.png" alt="Banana Berry Toast">
+                <h3>Banana Berry Toast</h3>
+                <p>Peanut butter topped with bananas and fresh berries.</p>
+            </div>
+            <div class="menu-item" id="banana-grid">
+                <img src="imagesfinalproject/BananaGridToast.png" alt="Banana Grid Toast">
+                <h3>Banana Grid Toast</h3>
+                <p>Sliced bananas arranged over creamy peanut butter.</p>
+            </div>
+            <div class="menu-item" id="cottage-cheese">
+                <img src="imagesfinalproject/CottageCheeseHoney.png" alt="Cottage Cheese Honey Toast">
+                <h3>Cottage Cheese & Honey</h3>
+                <p>Fresh cottage cheese topped with a sweet honey drizzle.</p>
+            </div>
+            <div class="menu-item" id="cucumber-toast">
+                <img src="imagesfinalproject/FreshCucumberToast.png" alt="Fresh Cucumber Toast">
+                <h3>Fresh Cucumber Toast</h3>
+                <p>Cream cheese spread topped with crisp cucumber slices.</p>
+            </div>
+            <div class="menu-item" id="radish-toast">
+                <img src="imagesfinalproject/RadishMicrogreensToast.png" alt="Radish Microgreens Toast">
+                <h3>Radish Microgreens Toast</h3>
+                <p>Sliced radishes and fresh microgreens over avocado.</p>
+            </div>
+            <div class="menu-item" id="raspberry-almond">
+                <img src="imagesfinalproject/RaspberryAlmondToast.png" alt="Raspberry Almond Toast">
+                <h3>Raspberry Almond Toast</h3>
+                <p>Almond butter topped with juicy fresh raspberries.</p>
+            </div>
+            <div class="menu-item" id="raspberry-jam">
+                <img src="imagesfinalproject/RaspberryJamCream.png" alt="Raspberry Jam Cream Toast">
+                <h3>Raspberry Jam Cream</h3>
+                <p>Rich cream cheese paired with sweet raspberry jam.</p>
+            </div>
+            <div class="menu-item" id="spicy-jalapeno">
+                <img src="imagesfinalproject/SpicyJalapeño.png" alt="Spicy Jalapeño Toast">
+                <h3>Spicy Jalapeño Toast</h3>
+                <p>Avocado mash topped with fresh spicy jalapeño slices.</p>
+            </div>
+            <div class="menu-item" id="strawberry-jam-toast">
+                <img src="imagesfinalproject/StrawberryJam.png" alt="Strawberry Jam Toast">
+                <h3>Strawberry Jam Toast</h3>
+                <p>Classic peanut butter layered with sweet strawberry jam.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-category">
+        <h2>Healthy Bowls</h2>
+        <div class="menu-grid">
+            <div class="menu-item" id="pink-dragon">
+                <img src="imagesfinalproject/PinkDragonBowl.png" alt="Pink Dragon Bowl">
+                <h3>Pink Dragon Bowl</h3>
+                <p>Dragonfruit base, granola, banana, and chia seeds.</p>
+            </div>
+            <div class="menu-item" id="roasted-peach">
+                <img src="imagesfinalproject/RoastedPeachGranolaBowl.png" alt="Roasted Peach Bowl">
+                <h3>Roasted Peach Granola Bowl</h3>
+                <p>Caramelized roasted peaches over oats and crunchy granola.</p>
+            </div>
+            <div class="menu-item" id="double-chocolate">
+                <img src="imagesfinalproject/DoubleChocolateBananaBowl.png" alt="Double Chocolate Banana Bowl">
+                <h3>Double Chocolate Banana</h3>
+                <p>Rich chocolate base, banana slices, and dark chocolate chunks.</p>
+            </div>
+            <div class="menu-item" id="antioxidant-bowl">
+                <img src="imagesfinalproject/AntioxidantPowerBowl.png" alt="Antioxidant Power Bowl">
+                <h3>Antioxidant Power Bowl</h3>
+                <p>Oat base topped with pomegranate, berries, almonds, and banana.</p>
+            </div>
+            <div class="menu-item" id="blueberry-crunch">
+                <img src="imagesfinalproject/BlueberryCrunchBowl.png" alt="Blueberry Crunch Bowl">
+                <h3>Blueberry Crunch Bowl</h3>
+                <p>Yogurt base paired with fresh blueberries and dark granola.</p>
+            </div>
+            <div class="menu-item" id="walnut-berry">
+                <img src="imagesfinalproject/WalnutBerryCrunchBowl.png" alt="Walnut Berry Crunch Bowl">
+                <h3>Walnut Berry Crunch Bowl</h3>
+                <p>Pink oat base topped with walnuts, raspberries, and honey.</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="custom-footer">
+    <div class="footer-subscribe">
+        <h2>Subscribe to our emails</h2>
+        <p>Be the first to know about new collections and exclusive offers.</p>
+        <form class="subscribe-form" id="subscribeForm">
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">→</button>
+        </form>
+        <div id="successMessage" class="success-message hidden">
+            <span class="check-icon">✓</span>
+            <span>Thanks for subscribing</span>
+        </div>
+    </div>
+    <hr class="footer-divider">
     <div class="footer-content">
         <div class="footer-logo">
             <h2 class="brand-font">Lady's Brew</h2>
         </div>
-        
-    <div class="footer-links-container">
-        <div class="footer-column">
-           <h3>Company</h3>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About Us</a></li>
-              </ul>
+        <div class="footer-links-container">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
         </div>
-    
-        <div class="footer-column">
-            <h3>Shop</h3>
-              <ul>
-                <li><a href="shop.html">Coffee Blends</a></li>
-              </ul>
-        </div>
-
-       <div class="footer-column">
-            <h3>Support</h3>
-             <ul>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-             </ul>
-       </div>
-    </div>
     </div>
 </footer>
+
+<div class="auth-overlay hidden" id="authOverlay">
+    <div class="auth-container">
+        <button class="auth-close-btn" id="authCloseBtn">✕</button>
+        <div id="view-login" class="auth-view">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" id="login-email">
+            <input type="password" placeholder="Password" id="login-pass">
+            <a href="#" class="forgot-link" onclick="showView('view-forgot')">Forgot your password?</a>
+            <button class="primary-btn" onclick="window.location.href='index.html'">Sign in</button>
+            <p class="auth-footer">or <span class="link" onclick="showView('view-create')">Create account</span></p>
+        </div>
+        <div id="view-forgot" class="auth-view hidden">
+            <h2>Reset your password</h2>
+            <p class="auth-desc">We will send you an email to reset your password</p>
+            <input type="email" placeholder="Email">
+            <button class="primary-btn" onclick="showLoginWithMsg()">Submit</button>
+            <p class="cancel-link" onclick="showView('view-login')">Cancel</p>
+        </div>
+        <div id="view-create" class="auth-view hidden">
+            <h2>Create account</h2>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="primary-btn" onclick="window.location.href='index.html'">Create</button>
+            <p class="auth-footer"><span class="link" onclick="showView('view-login')">Back to Login</span></p>
+        </div>
+        <div id="login-success-msg" class="success-message hidden">
+            <span class="check-icon">✓</span>
+            <span>We've sent you an email.</span>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

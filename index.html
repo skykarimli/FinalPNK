@@ -9,20 +9,48 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="logo">Lady's Brew</div>
-        <nav class="nav-links">
-            <a href="index.html" class="active">HOME</a>
-            <a href="locations.html">ORDER NOW</a>
-            <a href="about.html">ABOUT US</a>
-            <a href="menu.html">MENU</a>
-        </nav>
-        <div class="nav-icons">
-            <span class="icon">🔍</span>
-            <a href="login.html" class="icon">👤</a>
-            <span class="icon">🛍️</span>
+  <header class="main-header">
+    <div class="logo">Lady's Brew</div>
+    <nav class="nav-links">
+        <a href="index.html" class="active">HOME</a>
+        <a href="locations.html">ORDER NOW</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="menu.html">MENU</a>
+    </nav>
+   <div class="nav-icons">
+    <span class="icon" id="searchIconBtn">
+        <img src="imagesfinalproject/search.svg" alt="Search" class="nav-svg-img">
+    </span>
+    <a href="javascript:void(0)" class="icon" id="loginIcon">
+        <img src="imagesfinalproject/user.svg" alt="User" class="nav-svg-img">
+    </a>
+   </div>
+</header>
+
+<div class="ladysbrew-search-overlay hidden" id="ladysbrewSearchOverlay">
+    <div class="ladysbrew-search-container">
+        <div class="ladysbrew-search-pill">
+            <input type="text" id="ladysbrewSearchInput" placeholder="Search" autocomplete="off">
+            
+            <button class="pill-clear-btn hidden" id="pillClearBtn">
+                <img src="imagesfinalproject/clearinner.svg" alt="Clear">
+            </button>
+            <div class="pill-divider hidden" id="pillDivider"></div>
+            
+            <span class="pill-inner-search-icon" id="innerSearchBtn">
+                <img src="imagesfinalproject/search.svg" alt="Search">
+            </span>
         </div>
-    </header>
+        
+        <button class="ladysbrew-close-btn" id="ladysbrewCloseBtn">
+            <img src="imagesfinalproject/close.svg" alt="Close">
+        </button>
+    </div>
+    
+    <div class="ladysbrew-results-wrapper hidden" id="ladysbrewResultsContainer">
+        <div class="ladysbrew-results" id="ladysbrewSearchResults"></div>
+    </div>
+</div>
 
     <section class="hero-section">
         <div class="hero-overlay"></div>
@@ -33,26 +61,27 @@
         </div>
     </section>
 
-    <section class="shop-section">
-        <h2 class="section-title">Shop Retail</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="imagesfinal/cup.png" alt="Lady's Brew Cup">
-                <h3>Signature Tumbler</h3>
-                <p>$28.00</p>
-            </div>
-            <div class="product-card">
-                <img src="imagesfinal/coffeebean.png" alt="Coffee Beans">
-                <h3>Premium Beans 250g</h3>
-                <p>$24.00</p>
-            </div>
-            <div class="product-card">
-                <img src="imagesfinal/candle.png" alt="Espresso Candle">
-                <h3>Espresso Candle</h3>
-                <p>$20.00</p>
-            </div>
+   <section class="shop-section">
+    <h2 class="section-title">Shop Retail</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="imagesfinalproject/Lady'sBrewCup.png" alt="Lady's Brew Cup">
+            <h3>Signature Tumbler</h3>
+            <p>$28.00</p>
         </div>
-    </section>
+        <div class="product-card">
+            <img src="imagesfinalproject/houseblendbean.png" alt="House Blend">
+            <h3>Premium Beans 340g</h3>
+            <p>$24.00</p>
+        </div>
+        <div class="product-card">
+            <img src="imagesfinalproject/espressoblendbean.png" alt="Espresso Blend">
+            <h3>Premium Beans 340g</h3>
+            <p>$20.00</p>
+        </div>
+    </div>
+    <div class="upcoming-badge">Upcoming event, stay tuned... ✨</div>
+</section>
 
   <footer class="custom-footer">
    <div class="footer-subscribe">
@@ -63,7 +92,7 @@
     <input type="email" name="email" placeholder="Email" required>
     <button type="submit">→</button>
    </form>
-    <div id="successMessage" class="success-message">
+    <div id="successMessage" class="success-message hidden">
         <span class="check-icon">✓</span>
         <span>Thanks for subscribing</span>
     </div>
@@ -85,24 +114,43 @@
             <li><a href="about.html">About Us</a></li>
         </ul>
     </div>
-    
-    <div class="footer-column">
-        <h3>Shop</h3>
-        <ul>
-            <li><a href="shop.html">Coffee Blends</a></li>
-        </ul>
-    </div>
-
-    <div class="footer-column">
-        <h3>Support</h3>
-        <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
     </div>
     </div>
 </footer>
+
+<div class="auth-overlay hidden" id="authOverlay">
+    <div class="auth-container">
+        <button class="auth-close-btn" id="authCloseBtn">✕</button>
+        <div id="view-login" class="auth-view">
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" id="login-email">
+            <input type="password" placeholder="Password" id="login-pass">
+            <a href="#" class="forgot-link" onclick="showView('view-forgot')">Forgot your password?</a>
+            <button class="primary-btn" onclick="window.location.href='index.html'">Sign in</button>
+            <p class="auth-footer">or <span class="link" onclick="showView('view-create')">Create account</span></p>
+        </div>
+        <div id="view-forgot" class="auth-view hidden">
+            <h2>Reset your password</h2>
+            <p class="auth-desc">We will send you an email to reset your password</p>
+            <input type="email" placeholder="Email">
+            <button class="primary-btn" onclick="showLoginWithMsg()">Submit</button>
+            <p class="cancel-link" onclick="showView('view-login')">Cancel</p>
+        </div>
+        <div id="view-create" class="auth-view hidden">
+            <h2>Create account</h2>
+            <input type="text" placeholder="First name">
+            <input type="text" placeholder="Last name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button class="primary-btn" onclick="window.location.href='index.html'">Create</button>
+            <p class="auth-footer"><span class="link" onclick="showView('view-login')">Back to Login</span></p>
+        </div>
+        <div id="login-success-msg" class="success-message hidden">
+            <span class="check-icon">✓</span>
+            <span>We've sent you an email.</span>
+        </div>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
